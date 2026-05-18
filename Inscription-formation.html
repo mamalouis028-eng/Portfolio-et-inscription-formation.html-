@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription</title>
+
+    <style>
+
+        body{
+
+           font-family: Arial, sans-serif;
+            background: linear-gradient(
+            135deg,
+           #ffd6e7,
+            #d8e8ff
+    );
+
+           margin: 20px;
+        }
+
+       form{
+         background-color: white;
+
+         width: 80%;
+
+         margin: auto;
+
+         padding: 25px;
+
+           border-radius: 20px;
+
+           box-shadow:
+           0 8px 20px rgba(
+           0,0,0,0.15);
+        }
+
+        fieldset{
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        legend{
+            font-weight: bold;
+            color: darkblue;
+        }
+
+        label{
+           color:#444;
+
+           font-size:18px;
+
+           font-weight:bold;
+
+           margin-top:10px;
+
+            display:block;
+        }
+
+     input,select,textarea{
+
+           width:100%;
+
+           padding:12px;
+
+           margin-top:5px;
+
+           border-radius:10px;
+
+           border:2px solid #c8b6ff;
+
+           font-size:16px;
+        }
+
+        .radio-group,
+        .checkbox-group{
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        button{
+
+           padding:12px 20px;
+
+           border:none;
+
+           border-radius:12px;
+
+           background-color:#8e44ad;
+
+           color:white;
+
+           font-size:16px;
+
+           margin-top:15px;
+        }
+  
+.valider{
+
+background-color:#28a745;
+
+color:white;
+
+padding:12px 20px;
+
+border:none;
+
+border-radius:10px;
+
+font-size:16px;
+
+cursor:pointer;
+}
+
+.effacer{
+
+background-color:#dc3545;
+
+color:white;
+
+padding:12px 20px;
+
+border:none;
+
+border-radius:10px;
+
+font-size:16px;
+
+cursor:pointer;
+}
+    </style>
+
+</head>
+
+<body>
+
+<h1>Formulaire d'inscription</h1>
+
+<form>
+
+</form>
+
+</body>
+</html>
+<!-- Groupe 1 -->
+<fieldset>
+
+    <legend>Informations personnelles</legend>
+
+    <label>Civilité :</label>
+
+    <select required>
+        <option value="">Choisir</option>
+        <option>M.</option>
+        <option>Mme</option>
+        <option>Autre</option>
+    </select>
+
+    <label>Nom :</label>
+    <input type="text" minlength="2" required>
+
+    <label>Prénom :</label>
+    <input type="text" minlength="2" required>
+
+    <label>Date de naissance :</label>
+    <input type="date" max="2008-01-01" required>
+
+</fieldset>
+<!-- Groupe 2 -->
+<fieldset>
+
+    <legend>Coordonnées</legend>
+
+    <label>Email :</label>
+    <input type="email" required>
+
+    <label>Téléphone :</label>
+    <input type="tel"
+           pattern="^\+509[0-9]{8}$"
+           placeholder="+509XXXXXXXX"
+           required>
+
+    <label>Ville :</label>
+    <input type="text" required>
+
+    <label>Pays :</label>
+
+    <select required>
+        <option>Haïti</option>
+        <option>France</option>
+        <option>Canada</option>
+        <option>USA</option>
+    </select>
+
+</fieldset>
+<!-- Groupe 3 -->
+<fieldset>
+
+    <legend>Formation</legend>
+
+    <label>Formation choisie :</label>
+
+    <select required>
+        <option value="">Choisir</option>
+        <option>HTML/CSS</option>
+        <option>JavaScript</option>
+        <option>React</option>
+        <option>Pack complet</option>
+    </select>
+
+    <label>Niveau actuel :</label>
+
+    <div class="radio-group">
+
+        <label>
+            <input type="radio" name="niveau" required>
+            Débutant
+        </label>
+
+        <label>
+            <input type="radio" name="niveau">
+            Intermédiaire
+        </label>
+
+        <label>
+            <input type="radio" name="niveau">
+            Avancé
+        </label>
+
+    </div>
+
+    <label>Date de début souhaitée :</label>
+    <input type="date" min="2026-05-14">
+
+    <label>Motivation :</label>
+
+    <textarea rows="10"
+              maxlength="500"
+              placeholder="Expliquez votre motivation...">
+    </textarea>
+
+</fieldset>
+<!-- Groupe 4 -->
+<fieldset>
+
+    <legend>Options</legend>
+
+    <label>Modalité :</label>
+
+    <div class="radio-group">
+
+        <label>
+            <input type="radio" name="modalite" required>
+            Présentiel
+        </label>
+
+        <label>
+            <input type="radio" name="modalite">
+            En ligne
+        </label>
+
+        <label>
+            <input type="radio" name="modalite">
+            Hybride
+        </label>
+
+    </div>
+
+    <label>Horaires préférés :</label>
+
+    <div class="checkbox-group">
+
+        <label>
+            <input type="checkbox">
+            Matin
+        </label>
+
+        <label>
+            <input type="checkbox">
+            Après-midi
+        </label>
+
+        <label>
+            <input type="checkbox">
+            Soir
+        </label>
+
+    </div>
+
+    <label>
+        <input type="checkbox" required>
+        Recevoir la newsletter
+    </label>
+
+</fieldset>
+<!-- Groupe 5 -->
+<fieldset>
+
+    <legend>Validation</legend>
+
+    <label>
+        <input type="checkbox" required>
+        J'accepte les conditions générales
+    </label>
+
+    <br><br>
+
+   <button type="submit" class="valider">
+       Valider mon inscription
+   </button>
+
+   <button type="reset" class="effacer">
+       Effacer
+   </button>
+
+</fieldset>
+</html>
